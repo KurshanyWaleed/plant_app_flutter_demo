@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:palnt_app_flutter/constants.dart';
 
 // ignore: camel_case_types
@@ -17,7 +18,14 @@ class body extends StatelessWidget {
           children: [
             Expanded(
                 child: Column(
-              children: [],
+              children: [
+                IconButton(
+                    padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: SvgPicture.asset("assets/icons/back_arrow.svg"))
+              ],
             )),
             Container(
               height: size.height * .8,
