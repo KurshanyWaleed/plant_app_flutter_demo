@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:palnt_app_flutter/constants.dart';
-
-import 'icon_card.dart';
+import 'package:palnt_app_flutter/screens/home/components/details/components/details/imag_with_icon.dart';
+import 'package:palnt_app_flutter/screens/home/components/details/components/details/test_and_price.dart';
 
 // ignore: camel_case_types
 class body extends StatelessWidget {
@@ -14,63 +13,53 @@ class body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
-            child: SizedBox(
-              height: size.height * .8,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(vertical: kDefaultPadding),
-                      child: Column(
-                        children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: IconButton(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: kDefaultPadding),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: SvgPicture.asset(
-                                    "assets/icons/back_arrow.svg")),
-                          ),
-                          const Spacer(),
-                          const IconCard(iconPath: "assets/icons/sun.svg"),
-                          const IconCard(iconPath: "assets/icons/icon_2.svg"),
-                          const IconCard(iconPath: "assets/icons/icon_3.svg"),
-                          const IconCard(iconPath: "assets/icons/icon_4.svg"),
-                        ],
-                      ),
-                    ),
+          ImageWithIcons(size: size),
+          const TextAndPrice(title: "Angilica", country: "Russia", price: 400),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: TextButton(
+                  child: const Text("Buy Now"),
+                  style: TextButton.styleFrom(
+                    primary: Colors.white,
+                    backgroundColor: Colors.green,
+                    elevation: 20,
+                    minimumSize: const Size(100, 50),
+                    shape: const RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.only(topRight: Radius.circular(10))),
                   ),
-                  Container(
-                    height: size.height * .8,
-                    width: size.width * .75,
-                    decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(50),
-                            bottomLeft: Radius.circular(50)),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: const Offset(0, 10),
-                            blurRadius: 60,
-                            color: kPrimaryColor.withOpacity(.29),
-                          )
-                        ],
-                        image: const DecorationImage(
-                            alignment: Alignment.centerLeft,
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/images/img.png"))),
-                  )
-                ],
+                  onPressed: () {},
+                ),
               ),
-            ),
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: TextButton(
+                  child: const Text(
+                    "Cancel",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  style: TextButton.styleFrom(
+                    primary: Colors.white,
+                    minimumSize: const Size(100, 50),
+                    shape: const RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.only(topRight: Radius.circular(10))),
+                  ),
+                  onPressed: () {},
+                ),
+              )
+            ],
           )
         ],
       ),

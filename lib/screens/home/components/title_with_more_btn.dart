@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
 
-// ignore: camel_case_types
-class titleWithMoreButton extends StatelessWidget {
-  const titleWithMoreButton({
+class TitleWithMoreButton extends StatelessWidget {
+  const TitleWithMoreButton({
     Key? key,
     required this.press,
     required this.text,
@@ -44,7 +42,7 @@ class TitleWithCustomUnderLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 24,
       child: Stack(
         children: [

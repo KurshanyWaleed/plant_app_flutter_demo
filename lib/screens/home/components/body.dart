@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:palnt_app_flutter/constants.dart';
 import 'package:palnt_app_flutter/screens/home/components/featured_plants.dart';
 import 'package:palnt_app_flutter/screens/home/components/recomend_plants.dart';
-import 'package:palnt_app_flutter/screens/home/components/titlewithMoreBtn.dart';
+import 'package:palnt_app_flutter/screens/home/components/title_with_more_btn.dart';
 
 import 'header_box_search.dart';
 
@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
               children: [
                 const TitleWithCustomUnderLine(text: "Recomended"),
                 const Spacer(),
-                titleWithMoreButton(text: "More", press: () {}),
+                TitleWithMoreButton(text: "More", press: () {}),
               ],
             ),
           ),
@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
               children: [
                 const TitleWithCustomUnderLine(text: "Featured Plants"),
                 const Spacer(),
-                titleWithMoreButton(text: "More", press: () {}),
+                TitleWithMoreButton(text: "More", press: () {}),
               ],
             ),
           ),
