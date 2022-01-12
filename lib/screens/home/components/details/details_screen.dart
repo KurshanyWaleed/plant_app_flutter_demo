@@ -7,6 +7,6 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: body());
+    return const Scaffold(body: Body());
   }
 }

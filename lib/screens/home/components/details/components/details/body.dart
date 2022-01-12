@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:palnt_app_flutter/constants.dart';
 import 'package:palnt_app_flutter/screens/home/components/details/components/details/imag_with_icon.dart';
 import 'package:palnt_app_flutter/screens/home/components/details/components/details/test_and_price.dart';
 
-// ignore: camel_case_types
-class body extends StatelessWidget {
-  const body({
+class Body extends StatelessWidget {
+  const Body({
     Key? key,
   }) : super(key: key);
 
