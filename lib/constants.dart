@@ -5,7 +5,7 @@ const kPrimaryColor = Color(0xFF0C9869);
 const kTextColor = Color(0xFF3C4046);
 const kBackgroundColor = Color(0xFFF9F8FD);
 
-const double kDefaultPadding = 20.0;
+const double kDefaultPadding = 20;
 Color c = Colors.red;
 MaterialColor customGreen = const MaterialColor(0xFF0C9869, {
   50: Color(0xffe8f5e9),
